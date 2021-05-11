@@ -12,12 +12,12 @@ spec:
       labels:
         app: weather-app-frontend
 
-    spce:
+    spec:
       containers:
         - name: weather-app-frontend
           image: mohammadmahmoud/weather-app-frontend
 
   replicas: 3
-  selector:
+  selector: 
     matchLabels:
       app: myapp
