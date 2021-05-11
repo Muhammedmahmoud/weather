@@ -17,7 +17,7 @@ spec:
         - name: weather-app-frontend
           image: mohammadmahmoud/weather-app-frontend
 
-    replicas: 3
-    selector:
-      matchLabels:
-        app: myapp
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
