@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: backend-replicaset
+  labels:
+    app: weather-app
+    type: backend
+spec:
+  template:
+    metadata:
+      name: backend-pod
+      labels:
+        app: weather-app
+
+    spec:
+      containers:
+        - name: weather-app
+          image: mohammadmahmoud/weather-app
+
+  replicas: 3
+  selector:
+    matchLabels:
+      app: weather-app
