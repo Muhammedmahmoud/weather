@@ -18,6 +18,6 @@ spec:
           image: mohammadmahmoud/weather-app-frontend
 
   replicas: 3
-  selector: 
+  selector:
     matchLabels:
-      app: myapp
+      app: weather-app-frontend
