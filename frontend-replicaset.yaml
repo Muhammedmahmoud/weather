@@ -1,21 +1,23 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: replicaSet
 metadata:
-  name: frontend
+  name: frontend-replicaset
   labels:
     app: weather-app-frontend
-    tier: frontend
+    type: frontend
 spec:
-  # modify replicas according to your case
-  replicas: 3
-  selector:
-    matchLabels:
-      tier: frontend
   template:
     metadata:
+      name: frontend-pod
       labels:
-        tier: frontend
-    spec:
+        app: weather-app-frontend
+
+    spce:
       containers:
         - name: weather-app-frontend
           image: mohammadmahmoud/weather-app-frontend
+
+    replicas: 3
+    selector:
+      matchLabels:
+        app: myapp
